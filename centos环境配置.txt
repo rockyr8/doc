@@ -1,0 +1,40 @@
+﻿按照最新版本GO，例如:
+1.https://golang.org/dl/
+wget https://redirector.gvt1.com/edgedl/go/go1.9.2.linux-amd64.tar.gz
+
+2.解压至/usr/local 里面
+tar -C /usr/local -xzf go1.9.2.linux-amd64.tar.gz
+
+3.加入环境变量
+打开  vi ~/.bash_profile
+添加
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/mygo
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+
+参考网址:https://tecadmin.net/install-go-on-centos/
+
+安装redis 前提要安装	yum install gcc gcc-c++
+1.wget http://download.redis.io/releases/redis-4.0.2.tar.gz
+2.tar -zxvf redis-4.0.2.tar.gz
+3.cd redis-4.0.2
+4.make install
+5.退出root，重新登录
+6.nohup redis-server redis.conf & 启动服务
+7.redis-cli 测试连接 出现 127.0.0.1:6379> INFO server 代表成功
+8.关闭/杀掉 redis服务    redis-cli shutdown  #如果需要重启需要重新登录root
+
+
+mygo:
+futer
+git包:
+
+go get github.com/gin-gonic/gin
+go get -u github.com/go-redis/redis
+go get -u github.com/go-sql-driver/mysql
+go get github.com/braintree/manners  服务器替换方案 想无缝重启、停机
+go get -u github.com/pquerna/ffjson 一个超块的json解析包
+
+
+守护进程daemon：使用supervisor
