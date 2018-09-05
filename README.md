@@ -10,17 +10,20 @@
 func TestT2(t *testing.T) {
 	var a int
 	a = 20
-	// fmt.Println(a)
 	fmt.Printf("%v\n",a)
 	str(&a)
-	// fmt.Println(a)
 	fmt.Printf("%v\n",a)
-
+	str1(&a)
+	fmt.Printf("%v\n",a)
 }
 
 func str(a *int) {
-	fmt.Printf("%v\n",a)
 	x := 100
-	a = &x
+	a = &x //这里只是修改了传来的指针,因为指针也是值传递,所以外部a不会有任何变化
+}
+
+func str1(a *int) {
+	x := 100
+	*a = x //这里是修改了传来的指针指向的内容,所以外部a就变成100了
 }
 ```
