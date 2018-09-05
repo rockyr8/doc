@@ -6,7 +6,8 @@
 
 ## 指针
 #### 在函数操作方面，任何参数都是值传递,指针也不列外。指针传值的时候,对指针指向的内容(**int)修改之后,外部可以体现,但是直接修改指针,外部是不会有变化的.
-#### func TestT2(t *testing.T) {
+#### 
+func TestT2(t *testing.T) {
 	var a int
 	a = 20
 	// fmt.Println(a)
