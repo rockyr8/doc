@@ -1,0 +1,19 @@
+windows 安装 
+1.Rust需要C++build tools，可以先安装Microsoft Visual C++ Build Tools 2019 ，内置了Visual C++ build tools。
+2.通过指定环境变量来设定目录。这里要设置两个环境变量：分别是 RUSTUP_HOME 和 CARGO_HOME。
+    RUSTUP_HOME 所指向的目录会存放 toolchain 等各种工具。(D:\rust_env\rustup)
+    CARGO_HOME 所指向的目录只放少量的文件，例如 rustc 等 bin 文件。(D:\rust_env\cargo)
+3.下载 rustup-init.exe 安装。
+4. （这一步选择安装）rust安装完成，把racer装上。
+   在cmd下面，通过如下语句安装：
+   cargo install racer
+   在我们的环境上，racer最后编译还是不能成功，提示有些语句在release版本中不支持的，可能需要使用nightly版本，我就是用了nightly版本才成功的。 用如下语句，升级到nightly版：
+   rustup install nightly
+   cargo +nightly install racer
+5.安装 CodeLLDB ：debug的一个插件
+6.安装 crates ：方便包管理的插件
+
+
+参考文章:
+https://zhuanlan.zhihu.com/p/29975631
+https://www.wandouip.com/t5i233324/
