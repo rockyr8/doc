@@ -1,6 +1,6 @@
 # vscode 自定义
-enablePreview = false 使 Visual Studio Code 的打开文件始终在新 Tab
-explorer.autoReveal = false  取消文件自动定位到侧边栏
+### enablePreview = false 使 Visual Studio Code 的打开文件始终在新 Tab
+### explorer.autoReveal = false  取消文件自动定位到侧边栏
 
 # doc
 文档和书籍
