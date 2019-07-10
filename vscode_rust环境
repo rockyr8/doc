@@ -4,7 +4,7 @@ windows 安装
     RUSTUP_HOME 所指向的目录会存放 toolchain 等各种工具。(D:\rust_env\rustup)
     CARGO_HOME 所指向的目录只放少量的文件，例如 rustc 等 bin 文件。(D:\rust_env\cargo)
 3.下载 rustup-init.exe 安装。
-4. （这一步选择安装）rust安装完成，把racer装上。
+4. rust安装完成，把racer装上。
    在cmd下面，通过如下语句安装：
    cargo install racer
    在我们的环境上，racer最后编译还是不能成功，提示有些语句在release版本中不支持的，可能需要使用nightly版本，我就是用了nightly版本才成功的。 用如下语句，升级到nightly版：
