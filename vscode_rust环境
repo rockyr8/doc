@@ -12,6 +12,7 @@ windows 安装
    cargo +nightly install racer
 5.安装 CodeLLDB ：debug的一个插件
 6.安装 crates ：方便包管理的插件
+7.安装 cargo fmt 命令: rustup component add rustfmt --toolchain stable-x86_64-pc-windows-msvc
 
 
 参考文章:
